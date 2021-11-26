@@ -1,5 +1,5 @@
 # infect_termux
-un sencillo script para infectar app original usando zipalign jarsigner keytool apktool =) 
+un sencillo script para infectar app original usando zipalign jarsigner keytool apktool en termux =) 
 # instalacion
 * apt update && apt upgrade -y
 * apt install git -y
