@@ -4,6 +4,7 @@ un sencillo script para infectar app original usando zipalign jarsigner keytool 
 * apt update && apt upgrade -y
 * apt install git -y
 * git clone https://github.com/ju4n-23/infect_termux.git
+* cd infect_termux
 * chmod +x *
 * bash install.sh
 * bash ju4n.sh
